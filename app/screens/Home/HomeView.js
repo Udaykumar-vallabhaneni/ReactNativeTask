@@ -1,12 +1,10 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import { View, Text, Image, ScrollView } from 'react-native';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
 import TabBar from 'react-native-underline-tabbar';
 import styles from './styles';
-import { getMainScreenData, selectMainScreenData } from '../../actions/apiActions';
 
 const Page = ({ label }) => {
     return (<View style={[styles.container, { height: '100%' }]}>
@@ -26,14 +24,8 @@ class HomeView extends Component {
     }
 
     static propTypes = {
-        fetchmainScreenData: PropTypes.func,
+        fetchData: PropTypes.func,
     }
-
-    // eslint-disable-next-line react/no-deprecated
-    componentWillMount() {
-        // this.props.fetchmainScreenData();
-    }
-
 
     render() {
         return (
@@ -75,17 +67,7 @@ class HomeView extends Component {
         );
     }
 }
-const mapStateToProps = state => ({
-    // products: selectMainScreenData(state),
-});
 
-function mapDispatchToProps(dispatch) {
-    return {
-        // fetchmainScreenData: () => dispatch(getMainScreenData()),
-    };
-}
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(HomeView);
+
+export default HomeView;

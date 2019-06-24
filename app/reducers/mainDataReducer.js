@@ -1,21 +1,15 @@
-import * as types from '../actions/types';
+/* eslint-disable indent */
+import * as ACTIONS from '../actions/types';
 
-export function mainDataReducer(state, action) {
+const mainDataReducer = (state = {}, action) => {
     switch (action.type) {
-        case types.GET_MAIN_SCREEN_DATA:
-            return {
-                ...state,
-                data: action.payload
-            };
-        case types.SELECT_MAIN_SCREEN_DATA:
-            return {
-                ...state,
-                id: action.response
-            };
+        case ACTIONS.GET_MAIN_SCREEN_DATA:
+            return { ...state };
+        case ACTIONS.GET_MAIN_SCREEN_DATA_RECIEVED:
+            return { ...state, data: action.json[0] };
         default:
-            // the dispatched action is not in this reducer, return the state unchanged
             return state;
     }
-}
+};
 
-export const getProducts = state => state.products;
+export default mainDataReducer;
