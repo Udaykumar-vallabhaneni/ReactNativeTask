@@ -3,6 +3,7 @@ import { persistStore, persistCombineReducers } from 'redux-persist';
 import storage from 'redux-persist/es/storage'; // default: localStorage if web, AsyncStorage if react-native
 import { createLogger } from 'redux-logger';
 import createSagaMiddleware from 'redux-saga';
+import defaultSaga from '../sagas/mainscreenSaga';
 
 import rootReducers from 'app/reducers'; // where reducers is a object of reducers
 import sagas from 'app/sagas';
@@ -35,6 +36,6 @@ const configureStore = () => {
     return { persistor, store };
 };
 
-sagaMiddleware.run(sagas);
+sagaMiddleware.run(defaultSaga);
 
 export default configureStore;

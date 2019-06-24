@@ -6,7 +6,7 @@ const mainDataReducer = (state = {}, action) => {
         case ACTIONS.GET_MAIN_SCREEN_DATA:
             return { ...state };
         case ACTIONS.GET_MAIN_SCREEN_DATA_RECIEVED:
-            return { ...state, data: action.json[0] };
+            return { ...state, data: action.data };
         default:
             return state;
     }

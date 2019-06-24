@@ -17,17 +17,17 @@ const styles = StyleSheet.create({
         height: 25,
         justifyContent: 'flex-start',
         marginLeft: 5,
-        width: 25,
+        width: 25
     },
     MainContainer: {
+        backgroundColor: '#F5FCFF',
         flexDirection: 'row',
-        flexWrap: 'wrap',
         justifyContent: 'space-between',
-        marginTop: 50,
+        marginTop: 50
     },
     MainHeader: {
         // backgroundColor: '#000',
-        height: 150
+        // height: 150
     },
     RightImage: {
         // backgroundColor: '#fff',
@@ -37,27 +37,29 @@ const styles = StyleSheet.create({
         width: 25
     },
     ScrollView: {
-        marginTop: 20,
+        marginTop: 20
     },
     container: {
-        alignItems: 'center',
+        // alignItems: 'center',
         backgroundColor: '#F5FCFF',
-        // flex: 1,
-        flex: 3,
-        height: 150,
-        justifyContent: 'center',
+        flex: 1
+        // justifyContent: 'center'
     },
     instructions: {
         color: '#333333',
         fontSize: 28,
         marginBottom: 5,
-        textAlign: 'center',
+        textAlign: 'center'
+    },
+    pageContainer: {
+        backgroundColor: '#fff',
+        flex: 1
     },
     tab: {
-        color: 'gray',
+        color: 'gray'
     },
     tabContainer: {
-        flex: 3,
+        flex: 3
     },
     textFont: {
         // color: 'white',
@@ -68,8 +70,8 @@ const styles = StyleSheet.create({
     welcome: {
         fontSize: 20,
         margin: 10,
-        textAlign: 'center',
-    },
+        textAlign: 'center'
+    }
 });
 
 export default styles;

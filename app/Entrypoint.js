@@ -14,10 +14,7 @@ export default class Entrypoint extends Component {
     render() {
         return (
             <Provider store={store}>
-                <PersistGate
-                    loading={<ActivityIndicator />}
-                    persistor={persistor}
-                >
+                <PersistGate loading={<ActivityIndicator />} persistor={persistor}>
                     <Navigator />
                 </PersistGate>
             </Provider>
