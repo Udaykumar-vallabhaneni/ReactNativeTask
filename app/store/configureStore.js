@@ -36,6 +36,8 @@ const configureStore = () => {
     return { persistor, store };
 };
 
+sagaMiddleware.run(sagas);
 sagaMiddleware.run(defaultSaga);
+
 
 export default configureStore;
